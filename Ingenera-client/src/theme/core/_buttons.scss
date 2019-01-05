@@ -1,0 +1,31 @@
+button {
+  cursor: pointer;
+}
+
+.btn {
+    &:hover{
+        cursor: pointer;
+        &.disabled{
+            &:hover{
+                cursor: not-allowed;
+            }
+        }
+    }
+    &.disabled, &:disabled{
+        opacity:1;
+    }
+    .badge {
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    font-size: 9px;
+  }
+}
+
+.btn-transparent {
+  color: #fff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+

@@ -1,0 +1,14 @@
+.theme-aspire-blue .bs-datepicker-head {
+    background-color: theme-color('primary');
+}
+
+.theme-aspire-blue .bs-datepicker-body table td span.selected,
+.theme-aspire-blue .bs-datepicker-body table td.selected span,
+.theme-aspire-blue .bs-datepicker-body table td span[class*='select-']:after,
+.theme-aspire-blue .bs-datepicker-body table td[class*='select-'] span:after {
+    background-color: theme-color('primary');
+}
+
+.theme-aspire-blue .bs-datepicker-body table td.week span {
+    color: theme-color('primary');
+}

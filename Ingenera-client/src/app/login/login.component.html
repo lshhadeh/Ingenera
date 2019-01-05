@@ -1,14 +1,8 @@
 <div class="container">
-    <div class="offset-md-3 col-md-6 pt-10 pt-5">
+    <div class="offset-md-3 col-md-6 pt-10 pt-5 bgGray">
     <h2>Login to Ingenera </h2>
-    <div class="p-5" style="background-color:#eee">
-    <mat-form-field>
-        <mat-select name='acctype_id' [(ngModel)]="access" (ngModelChange)="onSelect($event)" placeholder="Select Type">
-            <mat-option *ngFor="let acctype of acctypes" [value]="acctype.value">
-                {{ acctype.viewValue }}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
+    <div class="p-5 bgGray">
+
      
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-group">

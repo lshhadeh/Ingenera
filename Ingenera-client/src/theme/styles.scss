@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Override Boostrap variables
+@import 'bootstrap-variables';
+
+ // Import Bootstrap source files
+ @import '../../../node_modules/bootstrap/scss/bootstrap';
+
+// import font awsome
+///=$fa-font-path: '../../node_modules/font-awesome/fonts';
+//@import 'node_modules/font-awesome/scss/font-awesome';
+
+// Import theme styles
+@import 'core/core';
+
+
+//import custom global css
+@import './custom';
