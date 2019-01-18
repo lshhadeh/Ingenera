@@ -23,13 +23,15 @@ import {
   MatSelectModule,
 } from '@angular/material';
 import { ToastrModule } from 'ng6-toastr-notifications';
+import { TestComponent } from './test/test.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
     ResetPasswordComponent,
-    HomeComponent
+    HomeComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
