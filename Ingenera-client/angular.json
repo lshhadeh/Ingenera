@@ -137,10 +137,5 @@
       }
     }
   },
-  "defaultProject": "Ingenera-client",
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
-  }
+  "defaultProject": "Ingenera-client"
 }
