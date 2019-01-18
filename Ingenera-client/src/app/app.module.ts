@@ -11,6 +11,7 @@ import { SignupComponent } from './signup/signup.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { HomeComponent } from './home/home.component';
 import { ToastService } from './toast.service';
+import { CoreModule } from '../app/core/core.module';
 
 
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -46,7 +47,8 @@ import { TestComponent } from './test/test.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    CoreModule
   ],
   exports: [
     MatButtonModule,
