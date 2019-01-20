@@ -22,6 +22,12 @@ const APP_COMPONENTS = [
     AppHeaderComponent
 ];
 
+// Pipes
+import {
+    OrderBy,
+    TranslatePipe
+} from '../core/pipes';
+const PIPES=[TranslatePipe]
 
 @NgModule({
     imports: [
@@ -29,12 +35,13 @@ const APP_COMPONENTS = [
         BrowserAnimationsModule,
         AppRoutingModule
     ],
-    declarations: [...APP_COMPONENTS],
+    declarations: [...APP_COMPONENTS,...PIPES],
     providers: [
         AuthGuard
     ],
     exports: [
         ...APP_COMPONENTS,
+        ...PIPES,
         BrowserAnimationsModule,
         AppRoutingModule
         ]

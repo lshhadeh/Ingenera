@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule ,APP_INITIALIZER} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-
+import { HttpClientModule } from '@angular/common/http';
+import { TranslateService } from './translate.service';
 
 //import allcomponent.ts 
 import { AppComponent } from './app.component';
@@ -25,6 +26,12 @@ import {
 } from '@angular/material';
 import { ToastrModule } from 'ng6-toastr-notifications';
 import { TestComponent } from './test/test.component';
+
+export function setupTranslateFactory(
+  service: TranslateService): Function {
+  return () => service.use('fr');
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +43,7 @@ import { TestComponent } from './test/test.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MatButtonModule,
     MatFormFieldModule,
@@ -60,7 +68,13 @@ import { TestComponent } from './test/test.component';
     NoopAnimationsModule,
     MatSelectModule
   ],
-  providers: [ToastService],
+  providers: [ TranslateService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: setupTranslateFactory,
+      deps: [ TranslateService ],
+      multi: true
+    },ToastService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
