@@ -25,7 +25,7 @@ import {
   MatSelectModule,
 } from '@angular/material';
 import { ToastrModule } from 'ng6-toastr-notifications';
-import { TestComponent } from './test/test.component';
+import { SettingsComponent } from './settings/settings.component';
 
 export function setupTranslateFactory(
   service: TranslateService): Function {
@@ -39,7 +39,7 @@ export function setupTranslateFactory(
     SignupComponent,
     ResetPasswordComponent,
     HomeComponent,
-    TestComponent
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
