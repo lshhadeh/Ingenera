@@ -4,7 +4,11 @@
 @import "~font-awesome/css/font-awesome.css";
 
 //themes:
+.dark{
 @import './themeTypes/darkTheme.scss';
-@import './themeTypes/lightTheme.scss';
+}
+.light{
+    @import './themeTypes/lightTheme.scss';
+}
 //import custom global css
 @import './custom';
