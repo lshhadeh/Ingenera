@@ -14,10 +14,8 @@ export class SettingsComponent implements OnInit {
   }
 
   setTheme(theme){
-   let currentTheme=localStorage.getItem('theme') 
-    //let newTheme=currentTheme=='dark'?'light':'dark'
-    
-    localStorage.setItem('theme',theme) 
+   let currentTheme=localStorage.getItem('theme');     
+    localStorage.setItem('theme',theme); 
     this.document.body.classList.remove(currentTheme);
     this.document.body.classList.add(theme);
   }

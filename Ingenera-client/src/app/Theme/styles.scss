@@ -3,12 +3,11 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
 
+@import './themeTypes/lightTheme.scss';
 //themes:
 .dark{
-@import './themeTypes/darkTheme.scss';
-}
-.light{
-    @import './themeTypes/lightTheme.scss';
-}
+    @import './themeTypes/darkTheme.scss';
+    }
+
 //import custom global css
 @import './custom';
